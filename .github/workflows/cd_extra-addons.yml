@@ -21,4 +21,4 @@ jobs:
                     cd cit/ &&
                     git pull &&
                     cd ../.. &&
-                    sudo docker compose restart
+                    docker compose restart
