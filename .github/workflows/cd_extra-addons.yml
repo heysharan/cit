@@ -1,4 +1,4 @@
-name: Deploy Extra Addons
+name: Deploy Extra Addons (Odoo)
 
 on:
   push:
