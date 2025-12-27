@@ -6,7 +6,7 @@
     'depends': ['base', 'academic_department', 'academic_staff'],
     'data': [
         'security/ir.model.access.csv',
-        'views/placement_views.xml',
+        'views/association_views.xml',
         'views/association_event_views.xml',
     ],
     'installable': True,
