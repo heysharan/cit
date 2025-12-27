@@ -1,0 +1,46 @@
+<odoo>
+    <record id="view_academic_association_event_tree" model="ir.ui.view">
+        <field name="name">academic.association.event.list</field>
+        <field name="model">academic.association.event</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="association_id"/>
+                <field name="event_no"/>
+                <field name="event_name"/>
+                <field name="event_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_academic_association_event_form" model="ir.ui.view">
+        <field name="name">academic.association.event.form</field>
+        <field name="model">academic.association.event</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="association_id"/>
+                        <field name="event_no"/>
+                        <field name="event_name"/>
+                        <field name="event_date"/>
+                        <field name="event_report" filename="event_report_filename"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_academic_association_event" model="ir.actions.act_window">
+        <field name="name">Association Events</field>
+        <field name="res_model">academic.association.event</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+     <!-- Sub Menu -->
+    <menuitem id="menu_academic_association_event"
+              name="Events"
+              parent="menu_academic_association"
+              action="action_academic_association_event"
+              sequence="20"/>
+
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_academic_report_config_list" model="ir.ui.view">
+        <field name="name">academic.report.config.list</field>
+        <field name="model">academic.report.config</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="department_id"/>
+                <field name="academic_year"/>
+                <field name="report_type"/>
+            </list>
+        </field>
+    </record>
+</odoo>

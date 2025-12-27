@@ -1,0 +1,58 @@
+<odoo>
+    <record id="view_academic_association_tree" model="ir.ui.view">
+        <field name="name">academic.association.list</field>
+        <field name="model">academic.association</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="faculty_incharge"/>
+                <field name="role_name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_academic_association_form" model="ir.ui.view">
+        <field name="name">academic.association.form</field>
+        <field name="model">academic.association</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="faculty_incharge"/>
+                        <field name="role_name"/>
+                    </group>
+                    <notebook>
+                        <page string="Events">
+                            <field name="event_ids">
+                                <list editable="bottom">
+                                    <field name="event_no"/>
+                                    <field name="event_name"/>
+                                    <field name="event_date"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_academic_association" model="ir.actions.act_window">
+        <field name="name">Academic Associations</field>
+        <field name="res_model">academic.association</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_academic_root"
+              name="Academic Management"
+              sequence="10"/>
+
+    <menuitem id="menu_academic_association"
+              name="Associations"
+              parent="menu_academic_root"
+              action="action_academic_association"
+              sequence="10"/>
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <record id="group_academic_admin" model="res.groups">
+        <field name="name">Academic Admin</field>
+    </record>
+
+    <record id="group_academic_principal" model="res.groups">
+        <field name="name">Principal</field>
+    </record>
+
+    <record id="group_academic_hod" model="res.groups">
+        <field name="name">HOD</field>
+    </record>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <report
+        id="action_academic_report_pdf"
+        model="academic.report.wizard"
+        string="Academic Report"
+        report_type="qweb-pdf"
+        name="academic_reports.academic_report_template"
+        file="academic_reports.academic_report_template"
+    />
+</odoo>
