@@ -12,8 +12,8 @@ jobs:
             - name: SSH into server and deploy
               uses: appleboy/ssh-action@v1.0.0
               with:
-                host: 143.244.136.238
-                username: abbaihost
+                host: 46.224.177.73
+                username: sharan
                 key: ${{ secrets.SSH_PRIVATE_KEY_ABBAIHOST }}
                 script: |
                     cd cit/ &&
